@@ -18,13 +18,9 @@ contract newNFT is ERC721, Ownable {
 	// Base URI
 	string private _baseURIextended;
 
-	constructor(
-		string memory _name,
-		string memory _symbol,
-		address to_,
-		uint256 tokenId_,
-		string memory tokenURI_
-	) ERC721(_name, _symbol) {}
+	constructor(string memory _name, string memory _symbol)
+		ERC721(_name, _symbol)
+	{}
 
 	function setBaseURI(string memory baseURI_) external onlyOwner {
 		_baseURIextended = baseURI_;
