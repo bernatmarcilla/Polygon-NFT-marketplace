@@ -21,7 +21,7 @@ function App() {
               <h1 className="mb-5 text-5xl font-bold">Marketplace</h1>
               {nftList.map((x) => {
                 console.log('Test');
-                return <p className="mb-5"> {x} </p>
+                return <p className="mb-5"> {x.cloud} </p>
               })}
             </div>
           </div>
