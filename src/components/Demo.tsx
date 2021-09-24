@@ -91,25 +91,7 @@ export default function Demo() {
               </button>
               {(active || error) && connected(injected) && (
                 <>
-                  {!!(library && account) && (
-                    <button
-                      type="button"
-                      className="btn btn-primary"
-                      onClick={() => {
-                        library
-                          .getSigner(account)
-                          .signMessage("👋")
-                          .then((signature: any) => {
-                            window.alert(`Success!\n\n${signature}`);
-                          })
-                          .catch((err: Error) => {
-                            window.alert(`Failure!${err && err.message ? `\n\n${err.message}` : ""}`);
-                          });
-                      }}
-                    >
-                      Sign Message
-                    </button>
-                  )}
+                  {!!(library && account)}
                   <button
                     type="button"
                     className="btn btn-secondary"
