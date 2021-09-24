@@ -1,6 +1,13 @@
 import { Web3ReactProvider } from "@web3-react/core";
+import { getNFTs } from "../dapp/NFTs";
 
 import Demo, { getLibrary } from "../components/Demo";
+
+const nftList = getNFTs();
+
+
+const element = <h1>Hello World</h1>;
+
 
 function App() {
   return (
@@ -10,13 +17,12 @@ function App() {
         <div className="hero">
           <div className="text-center hero-content">
             <div className="max-w-md px-4 py-8">
-              <figure className="mb-5">
-                <img src="/logo.png" alt="logo" className="mask mask-squircle" />
-              </figure>
-              <h1 className="mb-5 text-5xl font-bold">Hello Dapp Starter</h1>
-              <p className="mb-5">
-                Edit <code>pages/index.tsx</code> and save to test HMR updates.
-              </p>
+
+              <h1 className="mb-5 text-5xl font-bold">Marketplace</h1>
+              {nftList.map((x) => {
+                console.log('Test');
+                return <p className="mb-5"> {x} </p>
+              })}
             </div>
           </div>
         </div>
