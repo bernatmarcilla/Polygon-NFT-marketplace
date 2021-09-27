@@ -20,6 +20,7 @@
     "@web3-react/walletconnect-connector": "6.2.4",
     "daisyui": "1.14.0",
     "loglevel": "1.7.1",
+    "mdb-react-ui-kit": "^1.4.0",
     "next": "11.1.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",

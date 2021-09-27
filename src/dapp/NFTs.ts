@@ -4,53 +4,21 @@ export function getNFTs() {
 
     const values = [
         {
-            "cloud": "Asia",
-            "availability": {
-                "last15Min": "100%",
-                "last24Hour": "100%"
-            },
-            "data_centers": [
-                {
-                    "title": "Bombay",
-                    "availability": {
-                        "last15Min": "100%",
-                        "last24Hour": "100%"
-                    }
-                },
-                {
-                    "title": "Bombay1",
-                    "availability": {
-                        "last15Min": "100%",
-                        "last24Hour": "100%"
-                    }
-                }
-            ]
+            "name": "NFT Shiba",
+            "description": "This image shows the true nature of ToTheMoon Meaning.",
+            "image": "https://ipfs.io/ipfs/QmXm2FmMfwk7gtDzwXcJR57mm4AoZPAMRi4cEnQPPDg39d",
         },
         {
-            "cloud": "Europe",
-            "availability": {
-                "last15Min": "100%",
-                "last24Hour": "100%"
-            },
-            "data_centers": [
-                {
-                    "title": "Bombay",
-                    "availability": {
-                        "last15Min": "100%",
-                        "last24Hour": "100%"
-                    }
-                },
-                {
-                    "title": "Bombay1",
-                    "availability": {
-                        "last15Min": "100%",
-                        "last24Hour": "100%"
-                    }
-                }
-            ]
+            "name": "NFT Shiba",
+            "description": "This image shows the true nature of ToTheMoon Meaning.",
+            "image": "https://ipfs.io/ipfs/QmXm2FmMfwk7gtDzwXcJR57mm4AoZPAMRi4cEnQPPDg39d",
+        },
+        {
+            "name": "NFT Shiba",
+            "description": "This image shows the true nature of ToTheMoon Meaning.",
+            "image": "https://ipfs.io/ipfs/QmXm2FmMfwk7gtDzwXcJR57mm4AoZPAMRi4cEnQPPDg39d",
         }
     ]
 
-    //const values = [1, 2, 3, 4, 5]
     return values
 }

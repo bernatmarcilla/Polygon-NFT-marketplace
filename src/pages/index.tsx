@@ -2,6 +2,7 @@ import { Web3ReactProvider } from "@web3-react/core";
 import { getNFTs } from "../dapp/NFTs";
 
 import Demo, { getLibrary } from "../components/Demo";
+import Card from "../components/Card"
 
 const nftList = getNFTs();
 
@@ -13,6 +14,7 @@ function App() {
   return (
     <Web3ReactProvider getLibrary={getLibrary}>
       <div className="container min-h-screen mx-auto">
+        <title>Polygon Marketplace</title>
         <Demo />
         <div className="hero">
           <div className="text-center hero-content">
@@ -21,7 +23,12 @@ function App() {
               <h1 className="mb-5 text-5xl font-bold">Marketplace</h1>
               {nftList.map((x) => {
                 console.log('Test');
-                return <p className="mb-5"> {x.cloud} </p>
+                return (
+                  <div>
+                    <Card name={x.name} image={x.image} description={x.description} />
+                    <p className="mb-5"> {x.name} </p>
+                  </div>
+                )
               })}
             </div>
           </div>
