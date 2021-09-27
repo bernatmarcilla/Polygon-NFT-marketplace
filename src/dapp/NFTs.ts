@@ -25,7 +25,7 @@ export function getNFTs() {
         {
             "name": "NFT Shiba",
             "description":
-                getIPFScid(),
+                "getIPFScid()",
             "image": "https://ipfs.io/ipfs/QmXm2FmMfwk7gtDzwXcJR57mm4AoZPAMRi4cEnQPPDg39d",
         }
     ]
