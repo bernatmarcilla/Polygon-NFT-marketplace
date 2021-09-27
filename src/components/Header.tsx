@@ -12,8 +12,8 @@ export function Header() {
   return (
     <div className="mb-2 shadow-lg navbar bg-neutral text-neutral-content rounded-box">
       <div className="flex-1 px-2 mx-2">
-        <span className="text-lg font-bold">{active ? "🟢" : error ? "🔴" : "🟠"}</span>
-        <h1 className="btn btn-ghost btn-sm rounded-btn" >{chainId == 80001 ? "Polygon Network" : "No Network"}</h1>
+        <span className="text-lg font-bold">{chainId == 80001 ? "🟢" : error ? "🔴" : "🟠"}</span>
+        <h1 className="btn btn-ghost btn-sm rounded-btn" >{chainId == 80001 ? "Polygon Network" : "No Polygon Network"}</h1>
       </div>
       <div className="flex-none hidden px-2 mx-2 lg:flex">
         <div className="flex items-stretch">
