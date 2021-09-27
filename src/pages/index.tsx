@@ -26,7 +26,7 @@ function App() {
                 return (
                   <div>
                     <Card name={x.name} image={x.image} description={x.description} />
-                    <p className="mb-5"> {x.name} </p>
+                    <br></br>
                   </div>
                 )
               })}

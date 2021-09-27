@@ -3,15 +3,15 @@ import { MDBCard, MDBCardBody, MDBCardTitle, MDBCardText, MDBCardImage, MDBBtn }
 
 export default function Card(props) {
     return (
-        <MDBCard style={{ maxWidth: '22rem' }}>
-            <MDBCardImage src={props.image} position='top' alt='...' />
+        <MDBCard style={{ maxWidth: '22rem', backgroundColor: '#222222' }}>
+            <MDBCardImage src="https://mdbootstrap.com/img/Photos/Others/images/43.jpg" position='top' alt='...' />
             <MDBCardBody>
-                <MDBCardTitle>{props.name}Card title</MDBCardTitle>
+                <MDBCardTitle>{props.name}</MDBCardTitle>
                 <MDBCardText>
                     {props.description}
-                    Some quick example text to build on the card title and make up the bulk of the card's content.
                 </MDBCardText>
-                <MDBBtn href='#'>Button</MDBBtn>
+                <br></br>
+                <MDBBtn href='#'>Buy NFT</MDBBtn>
             </MDBCardBody>
         </MDBCard>
     );
