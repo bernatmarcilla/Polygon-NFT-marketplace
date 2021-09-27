@@ -3,8 +3,8 @@ import { MDBCard, MDBCardBody, MDBCardTitle, MDBCardText, MDBCardImage, MDBBtn }
 
 export default function Card(props) {
     return (
-        <MDBCard style={{ maxWidth: '22rem', backgroundColor: '#222222' }}>
-            <MDBCardImage src="https://mdbootstrap.com/img/Photos/Others/images/43.jpg" position='top' alt='...' />
+        <MDBCard style={{ maxWidth: '42rem', backgroundColor: '#222222' }}>
+            <MDBCardImage src={props.image} position='top' alt='...' />
             <MDBCardBody>
                 <MDBCardTitle>{props.name}</MDBCardTitle>
                 <MDBCardText>
