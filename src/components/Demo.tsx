@@ -1,5 +1,6 @@
 import { Web3Provider } from "@ethersproject/providers";
 import { useWeb3React, UnsupportedChainIdError } from "@web3-react/core";
+import { chainId } from "../components/ChainId";
 import {
   NoEthereumProviderError,
   UserRejectedRequestError as UserRejectedRequestErrorInjected,
@@ -56,59 +57,68 @@ export default function Demo() {
   return (
     <>
       <Header />
-      <div>{!!error && <h4 style={{ marginTop: "1rem", marginBottom: "0" }}>{getErrorMessage(error)}</h4>}</div>
-      <div className="grid grid-cols-2 gap-2 px-2 py-4">
-        <div className="card bordered">
-          <figure>
-            <img className="h-24" src="https://metamask.io/images/mm-logo.svg" alt="metamask" />
-          </figure>
-          <div className="card-body">
-            <h2 className="card-title">
-              <a className="link link-hover" href="https://metamask.io/" target="_blank" rel="noreferrer">
-                MetaMask
-              </a>
-            </h2>
-            <p>A crypto wallet & gateway to blockchain apps</p>
-            <div className="justify-end card-actions">
-              <button
-                type="button"
-                className="btn btn-primary"
-                disabled={disabled}
-                onClick={() => {
-                  setActivatingConnector(injected);
-                  activate(injected);
-                }}
-              >
-                <div className="px-2 py-4">
-                  {activating(injected) && <p className="btn loading">loading...</p>}
-                  {connected(injected) && (
-                    <span role="img" aria-label="check">
-                      ✅
-                    </span>
-                  )}
+      <div>
+        <span>
+          {chainId === 80001 ? "" : (
+            <div>
+              <div>{!!error && <h4 style={{ marginTop: "1rem", marginBottom: "0" }}>{getErrorMessage(error)}</h4>}</div>
+              <div className="grid grid-cols-2 gap-2 px-2 py-4">
+                <div className="card bordered">
+                  <figure>
+                    <img className="h-24" src="https://metamask.io/images/mm-logo.svg" alt="metamask" />
+                  </figure>
+                  <div className="card-body">
+                    <h2 className="card-title">
+                      <a className="link link-hover" href="https://metamask.io/" target="_blank" rel="noreferrer">
+                        MetaMask
+                      </a>
+                    </h2>
+                    <p>A crypto wallet & gateway to blockchain apps</p>
+                    <div className="justify-end card-actions">
+                      <button
+                        type="button"
+                        className="btn btn-primary"
+                        disabled={disabled}
+                        onClick={() => {
+                          setActivatingConnector(injected);
+                          activate(injected);
+                        }}
+                      >
+                        <div className="px-2 py-4">
+                          {activating(injected) && <p className="btn loading">loading...</p>}
+                          {connected(injected) && (
+                            <span role="img" aria-label="check">
+                              ✅
+                            </span>
+                          )}
+                        </div>
+                        Connect with MetaMask
+                      </button>
+                      {(active || error) && connected(injected) && (
+                        <>
+                          {!!(library && account)}
+                          <button
+                            type="button"
+                            className="btn btn-secondary"
+                            onClick={() => {
+                              if (connected(walletconnect)) {
+                                (connector as any).close();
+                              }
+                              deactivate();
+                            }}
+                          >
+                            Deactivate
+                          </button>
+                        </>
+                      )}
+                    </div>
+                  </div>
                 </div>
-                Connect with MetaMask
-              </button>
-              {(active || error) && connected(injected) && (
-                <>
-                  {!!(library && account)}
-                  <button
-                    type="button"
-                    className="btn btn-secondary"
-                    onClick={() => {
-                      if (connected(walletconnect)) {
-                        (connector as any).close();
-                      }
-                      deactivate();
-                    }}
-                  >
-                    Deactivate
-                  </button>
-                </>
-              )}
+              </div>
             </div>
-          </div>
-        </div>
+          )}
+        </span>
+
       </div>
     </>
   );

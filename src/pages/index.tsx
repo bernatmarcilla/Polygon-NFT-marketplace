@@ -1,7 +1,6 @@
 import { Web3ReactProvider } from "@web3-react/core";
 import { getNFTs } from "../dapp/NFTs";
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
-import { chainId } from "../components/ChainId";
 
 import Demo, { getLibrary } from "../components/Demo";
 import Card from "../components/Card"
@@ -17,9 +16,7 @@ function App() {
     <Web3ReactProvider getLibrary={getLibrary}>
       <div className="container min-h-screen mx-auto">
         <title>Polygon Marketplace</title>
-        <span>
-          {chainId == 80001 ? "" : <Demo />}
-        </span>
+        <Demo />
         <div className="hero">
           <div className="text-center hero-content">
             <div className="max-w-md px-4 py-8">
