@@ -15,12 +15,12 @@ export function getNFTs() {
         {
             "name": "NFT Shiba",
             "description": "This image shows the true nature of ToTheMoon Meaning.",
-            "image": "https://ipfs.io/ipfs/QmXm2FmMfwk7gtDzwXcJR57mm4AoZPAMRi4cEnQPPDg39d",
+            "image": "http://www.threadbombing.com/data/media/2/EsvcgzrXEAM-G2X.gif",
         },
         {
             "name": "NFT Shiba",
             "description": "This image shows the true nature of ToTheMoon Meaning.",
-            "image": "https://ipfs.io/ipfs/QmXm2FmMfwk7gtDzwXcJR57mm4AoZPAMRi4cEnQPPDg39d",
+            "image": "https://c.tenor.com/3La-njJKab8AAAAd/dog-float.gif",
         },
         {
             "name": "NFT Shiba",
