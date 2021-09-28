@@ -11,11 +11,11 @@ const nftList = getNFTs();
 const element = <h1>Hello World</h1>;
 
 function getNFTOwner(abi, contract) {
-  /*
+
   const tokenContract = new Web3EthContract(abi, contract);
-  tokenContract.methods.owner.send({
+  tokenContract.methods.owner.call(function (err, result) {
+    console.log(result);
   });
-  */
 
   return (contract + abi);
 
