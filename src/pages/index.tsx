@@ -1,5 +1,6 @@
 import { Web3ReactProvider } from "@web3-react/core";
 import { getNFTs } from "../dapp/NFTs";
+import Web3EthContract from "web3-eth-contract"
 
 import Demo, { getLibrary } from "../components/Demo";
 import Card from "../components/Card"
@@ -10,11 +11,15 @@ const nftList = getNFTs();
 const element = <h1>Hello World</h1>;
 
 function getNFTOwner(abi, contract) {
+  /*
+  const tokenContract = new Web3EthContract(abi, contract);
+  tokenContract.methods.owner.send({
+  });
+  */
+
   return (contract + abi);
 
-
   /*
-    var tokenContract = new web3.eth.Contract(contractsInfo.tokenAContract.abi, contractsInfo.tokenAContract.address.toString().toLowerCase());
     var approveButton = function () { that.approvePoolA = true };
     stringValue = String(this.inputValueA.toString() + '000000000000000000');
   } else {
