@@ -1,6 +1,5 @@
 import { Web3ReactProvider } from "@web3-react/core";
 import { getNFTs } from "../dapp/NFTs";
-import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 
 import Demo, { getLibrary } from "../components/Demo";
 import Card from "../components/Card"
@@ -10,6 +9,36 @@ const nftList = getNFTs();
 
 const element = <h1>Hello World</h1>;
 
+function getNFTOwner(abi, contract) {
+  return (contract + abi);
+
+
+  /*
+    var tokenContract = new web3.eth.Contract(contractsInfo.tokenAContract.abi, contractsInfo.tokenAContract.address.toString().toLowerCase());
+    var approveButton = function () { that.approvePoolA = true };
+    stringValue = String(this.inputValueA.toString() + '000000000000000000');
+  } else {
+    var tokenContract = new web3.eth.Contract(contractsInfo.tokenBContract.abi, contractsInfo.tokenBContract.address.toString().toLowerCase());
+    var approveButton = function () { that.approvePoolB = true };
+    stringValue = String(this.inputValueB.toString() + '000000000000000000');
+  }
+
+  var that = this;
+
+  window.ethereum.enable().then(function () {
+    web3.eth.getAccounts(function (err, result) {
+      if (!err) {
+        that.defaultAccount = result[0];
+        //alert(that.routerContract.address);
+        tokenContract.methods.approve(contractsInfo.routerContract.address.toString().toLowerCase(), stringValue).send({
+          from: that.defaultAccount
+        });
+        approveButton();
+      }
+    })
+  })
+*/
+}
 
 function App() {
   return (
@@ -25,9 +54,9 @@ function App() {
               {nftList.map((x) => {
                 console.log('Test');
                 return (
-                  <div>
-                    <Card name={x.name} image={x.image} description={x.description} />
-                    <br></br>
+                  <div key={x.name}>
+                    <Card name={x.name} image={x.image} owner={getNFTOwner(x.contract.abi, x.contract.address)} description={x.description} />
+                    <br />
                   </div>
                 )
               })}

@@ -9,6 +9,7 @@ export default function Card(props) {
                 <MDBCardTitle>{props.name}</MDBCardTitle>
                 <MDBCardText>
                     {props.description}
+                    Owner: {props.owner}
                 </MDBCardText>
                 <br></br>
                 <MDBBtn href='#'>Buy NFT</MDBBtn>
