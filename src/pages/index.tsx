@@ -14,15 +14,11 @@ const element = <h1>Hello World</h1>;
 function getNFTOwner(abi, contract) {
 
   const tokenContract = new Web3EthContract(abi, contract);
-  tokenContract.setProvider('ws://localhost:8546');
+  tokenContract.setProvider('https://speedy-nodes-nyc.moralis.io/036063875a28828fa0c00596/polygon/mumbai');
 
-  var result = tokenContract.methods.owner().call();
-  console.log("Thiiiis", result);
-
-
-  //.methods.owner().call(function (err, result) {
-  //  console.log("RESULT", result);
-  //})
+  tokenContract.methods.owner().call().then(res => {
+    console.log("Thiiiis", res);
+  });
 
   return "Currently No one";
 
