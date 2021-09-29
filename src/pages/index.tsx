@@ -9,18 +9,15 @@ import Card from "../components/Card"
 const nftList = getNFTs();
 
 
-const element = <h1>Hello World</h1>;
-
 function getNFTOwner(abi, contract) {
 
   const tokenContract = new Web3EthContract(abi, contract);
   tokenContract.setProvider('https://speedy-nodes-nyc.moralis.io/036063875a28828fa0c00596/polygon/mumbai');
 
-  tokenContract.methods.owner().call().then(res => {
-    console.log("Thiiiis", res);
+  tokenContract.methods.owner().call().then(result => {
+    console.log("Owner: ", result)
+    return result;
   });
-
-  return "Currently No one";
 
   /*
     var approveButton = function () { that.approvePoolA = true };
@@ -60,7 +57,7 @@ function App() {
 
 
               {nftList.map((x) => {
-                console.log('Test');
+                console.log('NFT list iteration');
                 return (
                   <div key={x.name}>
                     <Card name={x.name} image={x.image} owner={getNFTOwner(x.contract.abi, x.contract.address)} description={x.description} />
