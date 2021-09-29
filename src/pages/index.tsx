@@ -20,14 +20,6 @@ function getNFTOwner(abi, contract) {
   });
 
   /*
-    var approveButton = function () { that.approvePoolA = true };
-    stringValue = String(this.inputValueA.toString() + '000000000000000000');
-  } else {
-    var tokenContract = new web3.eth.Contract(contractsInfo.tokenBContract.abi, contractsInfo.tokenBContract.address.toString().toLowerCase());
-    var approveButton = function () { that.approvePoolB = true };
-    stringValue = String(this.inputValueB.toString() + '000000000000000000');
-  }
-
   var that = this;
 
   window.ethereum.enable().then(function () {
