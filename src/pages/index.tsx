@@ -13,11 +13,15 @@ const element = <h1>Hello World</h1>;
 function getNFTOwner(abi, contract) {
 
   const tokenContract = new Web3EthContract(abi, contract);
-  tokenContract.methods.owner.call(function (err, result) {
-    console.log(result);
-  });
-
-  return (contract + abi);
+  /*
+  var result = tokenContract.owner();
+  console.log("Thiiiis", result)
+  
+  .methods.owner().call(function (err, result) {
+    console.log("RESULT", result);
+  })
+  */
+  return "Currently No one";
 
   /*
     var approveButton = function () { that.approvePoolA = true };
