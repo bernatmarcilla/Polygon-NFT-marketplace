@@ -1,5 +1,6 @@
 import { Web3ReactProvider } from "@web3-react/core";
 import { getNFTs } from "../dapp/NFTs";
+import Web3 from "web3"
 import Web3EthContract from "web3-eth-contract"
 
 import Demo, { getLibrary } from "../components/Demo";
@@ -13,14 +14,16 @@ const element = <h1>Hello World</h1>;
 function getNFTOwner(abi, contract) {
 
   const tokenContract = new Web3EthContract(abi, contract);
-  /*
-  var result = tokenContract.owner();
-  console.log("Thiiiis", result)
-  
-  .methods.owner().call(function (err, result) {
-    console.log("RESULT", result);
-  })
-  */
+  tokenContract.setProvider('ws://localhost:8546');
+
+  var result = tokenContract.methods.owner().call();
+  console.log("Thiiiis", result);
+
+
+  //.methods.owner().call(function (err, result) {
+  //  console.log("RESULT", result);
+  //})
+
   return "Currently No one";
 
   /*
