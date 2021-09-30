@@ -20,22 +20,6 @@ function getNFTOwner(abi, contract) {
   });
 
   return owner;
-  /*
-  var that = this;
-
-  window.ethereum.enable().then(function () {
-    web3.eth.getAccounts(function (err, result) {
-      if (!err) {
-        that.defaultAccount = result[0];
-        //alert(that.routerContract.address);
-        tokenContract.methods.approve(contractsInfo.routerContract.address.toString().toLowerCase(), stringValue).send({
-          from: that.defaultAccount
-        });
-        approveButton();
-      }
-    })
-  })
-*/
 }
 
 function App() {
