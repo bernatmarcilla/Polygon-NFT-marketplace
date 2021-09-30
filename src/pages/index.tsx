@@ -1,11 +1,10 @@
 import { Web3ReactProvider } from "@web3-react/core";
-import { getNFTs } from "../dapp/NFTs";
 import Web3 from "web3"
 import Web3EthContract from "web3-eth-contract"
+import { getNFTs } from "../dapp/NFTs";
 
 import Demo, { getLibrary } from "../components/Demo";
 import Card from "../components/Card"
-import { delay } from "underscore";
 
 const nftList = getNFTs();
 
