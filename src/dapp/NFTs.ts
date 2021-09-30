@@ -16,7 +16,8 @@ export function getNFTs() {
         {
             "name": "NFT Charles",
             "description": "This image shows the true nature of Cardano.",
-            "image": "https://ipfs.io/ipfs/QmNxfYJbg9QTEYTC8cTumH1csQP37C5YF43N3aeePaRK3J?filename=2.jpg",
+            "image_https": "https://ipfs.io/ipfs/QmNxfYJbg9QTEYTC8cTumH1csQP37C5YF43N3aeePaRK3J/",
+            "image_ipfs": "ipfs://bafybeiel6555j5mnlkhwffwrewqxh5vfrqysbvzsndc3xjstrl5yquh62q/",
             "contract": {
                 "abi": [
                     {
@@ -77,9 +78,10 @@ export function getNFTs() {
             }
         },
         {
-            "name": "NFT Shiba",
-            "description": "This image shows the true nature of ToTheMoon Meaning.",
-            "image": "https://ipfs.io/ipfs/QmNxfYJbg9QTEYTC8cTumH1csQP37C5YF43N3aeePaRK3J?filename=2.jpg",
+            "name": "NFT Charles Falcon",
+            "description": "This image shows the true nature of Cardano Falcon.",
+            "image_https": "https://ipfs.io/ipfs/Qmevqum3PWZDVVE7tRFhJZrBUEu6fd4pFpkxETUPCyeEHo/",
+            "image_ipfs": "ipfs://bafybeihwpvttxipkgma4toqsuqmhijiv4x73kbai3f35xqdewxfxpx5uzi/",
             "contract": {
                 "abi": [
                     {
@@ -142,7 +144,8 @@ export function getNFTs() {
         {
             "name": "NFT Shiba",
             "description": "This image shows the true nature of ToTheMoon Meaning.",
-            "image": "https://ipfs.io/ipfs/QmXm2FmMfwk7gtDzwXcJR57mm4AoZPAMRi4cEnQPPDg39d",
+            "image_https": "https://ipfs.io/ipfs/QmXm2FmMfwk7gtDzwXcJR57mm4AoZPAMRi4cEnQPPDg39d/",
+            "image_ipfs": "ipfs://bafybeiel6555j5mnlkhwffwrewqxh5vfrqysbvzsndc3xjstrl5yquh62q/",
             "contract": {
                 "abi": [
                     {

@@ -5,20 +5,21 @@ import Web3EthContract from "web3-eth-contract"
 
 import Demo, { getLibrary } from "../components/Demo";
 import Card from "../components/Card"
+import { delay } from "underscore";
 
 const nftList = getNFTs();
-
 
 function getNFTOwner(abi, contract) {
 
   const tokenContract = new Web3EthContract(abi, contract);
   tokenContract.setProvider('https://speedy-nodes-nyc.moralis.io/036063875a28828fa0c00596/polygon/mumbai');
 
+  let owner;
   tokenContract.methods.owner().call().then(result => {
-    console.log("Owner: ", result)
-    return result;
+    owner = result;
   });
 
+  return owner;
   /*
   var that = this;
 
@@ -49,10 +50,10 @@ function App() {
 
 
               {nftList.map((x) => {
-                console.log('NFT list iteration');
+                console.log('!');
                 return (
                   <div key={x.name}>
-                    <Card name={x.name} image={x.image} owner={getNFTOwner(x.contract.abi, x.contract.address)} description={x.description} />
+                    <Card name={x.name} image={x.image_https} owner={getNFTOwner(x.contract.abi, x.contract.address)} description={x.description} />
                     <br />
                   </div>
                 )
