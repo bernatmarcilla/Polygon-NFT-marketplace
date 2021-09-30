@@ -14,9 +14,9 @@ export function getNFTs() {
 
     const values = [
         {
-            "name": "NFT Shiba",
-            "description": "This image shows the true nature of ToTheMoon Meaning.",
-            "image": "http://www.threadbombing.com/data/media/2/EsvcgzrXEAM-G2X.gif",
+            "name": "NFT Charles",
+            "description": "This image shows the true nature of Cardano.",
+            "image": "https://ipfs.io/ipfs/QmNxfYJbg9QTEYTC8cTumH1csQP37C5YF43N3aeePaRK3J?filename=2.jpg",
             "contract": {
                 "abi": [
                     {
@@ -40,6 +40,19 @@ export function getNFTs() {
                     },
                     {
                         "inputs": [],
+                        "name": "owner",
+                        "outputs": [
+                            {
+                                "internalType": "address",
+                                "name": "",
+                                "type": "address"
+                            }
+                        ],
+                        "stateMutability": "view",
+                        "type": "function"
+                    },
+                    {
+                        "inputs": [],
                         "name": "renounceOwnership",
                         "outputs": [],
                         "stateMutability": "nonpayable",
@@ -57,22 +70,10 @@ export function getNFTs() {
                         "outputs": [],
                         "stateMutability": "nonpayable",
                         "type": "function"
-                    },
-                    {
-                        "inputs": [],
-                        "name": "owner",
-                        "outputs": [
-                            {
-                                "internalType": "address",
-                                "name": "",
-                                "type": "address"
-                            }
-                        ],
-                        "stateMutability": "view",
-                        "type": "function"
                     }
                 ],
-                "address": "0x1A1BB07da7EFAa8Bdc98B4F1c66d5616FC262042",
+                "address": "0x25fF1f3CEc4B29Db77455AdfC1a01cB1E43F1FeB",
+                "tokenId": 234234,
             }
         },
         {
@@ -102,6 +103,19 @@ export function getNFTs() {
                     },
                     {
                         "inputs": [],
+                        "name": "owner",
+                        "outputs": [
+                            {
+                                "internalType": "address",
+                                "name": "",
+                                "type": "address"
+                            }
+                        ],
+                        "stateMutability": "view",
+                        "type": "function"
+                    },
+                    {
+                        "inputs": [],
                         "name": "renounceOwnership",
                         "outputs": [],
                         "stateMutability": "nonpayable",
@@ -119,27 +133,15 @@ export function getNFTs() {
                         "outputs": [],
                         "stateMutability": "nonpayable",
                         "type": "function"
-                    },
-                    {
-                        "inputs": [],
-                        "name": "owner",
-                        "outputs": [
-                            {
-                                "internalType": "address",
-                                "name": "",
-                                "type": "address"
-                            }
-                        ],
-                        "stateMutability": "view",
-                        "type": "function"
                     }
                 ],
-                "address": "0x1A1BB07da7EFAa8Bdc98B4F1c66d5616FC262042",
+                "address": "0x25fF1f3CEc4B29Db77455AdfC1a01cB1E43F1FeB",
+                "tokenId": 456456,
             }
         },
         {
             "name": "NFT Shiba",
-            "description": "getIPFScid()",
+            "description": "This image shows the true nature of ToTheMoon Meaning.",
             "image": "https://ipfs.io/ipfs/QmXm2FmMfwk7gtDzwXcJR57mm4AoZPAMRi4cEnQPPDg39d",
             "contract": {
                 "abi": [
@@ -197,6 +199,7 @@ export function getNFTs() {
                     }
                 ],
                 "address": "0x1A1BB07da7EFAa8Bdc98B4F1c66d5616FC262042",
+                "tokenId": 123123,
             }
         }
     ]
