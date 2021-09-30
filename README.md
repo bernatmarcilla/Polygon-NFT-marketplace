@@ -12,9 +12,9 @@
 
 > Opinionated Dapp Starter Template
 
-## 🏠 [Homepage](https://dapp-starter.productsway.com)
+## [Homepage](https://dapp-starter.productsway.com)
 
-## ✨ [Demo](https://dapp-starter.productsway.com)
+## [Demo](https://dapp-starter.productsway.com)
 
 ## Screenshot
 
@@ -34,12 +34,12 @@
 
 ## Features
 
-- ⚡️ The React Framework for Production [NextJs](https://https://nextjs.org//)
-- 📦 [Hardhat](https://hardhat.org/) - Ethereum development environment for professionals
-- 🦾 [TypeChain Hardhat plugin](https://github.com/ethereum-ts/TypeChain/tree/master/packages/hardhat) - Automatically generate TypeScript bindings for smartcontracts while using Hardhat.
-- 🔥 [web3-react](https://github.com/NoahZinsmeister/web3-react/) - A simple, maximally extensible, dependency minimized framework for building modern Ethereum dApps
-- 🎨 [daisyUI Tailwind CSS Components](https://daisyui.com/) - clean HTML with component classes
-- 🎨 [OpenZeppelin](https://docs.openzeppelin.com/contracts/4.x/) - standard for secure blockchain applications
+- The React Framework for Production [NextJs](https://https://nextjs.org//)
+- [Hardhat](https://hardhat.org/) - Ethereum development environment for professionals
+- [TypeChain Hardhat plugin](https://github.com/ethereum-ts/TypeChain/tree/master/packages/hardhat) - Automatically generate TypeScript bindings for smartcontracts while using Hardhat.
+- [web3-react](https://github.com/NoahZinsmeister/web3-react/) - A simple, maximally extensible, dependency minimized framework for building modern Ethereum dApps
+- [daisyUI Tailwind CSS Components](https://daisyui.com/) - clean HTML with component classes
+- [OpenZeppelin](https://docs.openzeppelin.com/contracts/4.x/) - standard for secure blockchain applications
 
 ## Install
 
@@ -133,37 +133,3 @@ npx hardhat run --network localhost scripts/upgrade_box.ts
 - Website: https://productsway.com/
 - Twitter: [@jellydn](https://twitter.com/jellydn)
 - Github: [@jellydn](https://github.com/jellydn)
-
-## Stargazers 🌟
-
-[![Stargazers repo roster for jellydn/dapp-starter](https://reporoster.com/stars/jellydn/dapp-starter)](https://github.com/jellydn/dapp-starter/stargazers)
-
-## Show your support
-
-Give a ⭐️ if this project helped you!
-
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/Q5Q61Q7YM)
-
-## Contributors ✨
-
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<table>
-  <tr>
-    <td align="center"><a href="https://productsway.com/"><img src="https://avatars.githubusercontent.com/u/870029?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Dung Duc Huynh (Kaka)</b></sub></a><br /><a href="https://github.com/jellydn/dapp-starter/commits?author=jellydn" title="Documentation">📖</a> <a href="https://github.com/jellydn/dapp-starter/commits?author=jellydn" title="Code">💻</a></td>
-  </tr>
-</table>
-
-<!-- markdownlint-restore -->
-<!-- prettier-ignore-end -->
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
-
----
-
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
