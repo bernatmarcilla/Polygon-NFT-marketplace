@@ -79,7 +79,7 @@ export function getNFTs() {
         {
             "name": "NFT Shiba",
             "description": "This image shows the true nature of ToTheMoon Meaning.",
-            "image": "https://c.tenor.com/3La-njJKab8AAAAd/dog-float.gif",
+            "image": "https://ipfs.io/ipfs/QmNxfYJbg9QTEYTC8cTumH1csQP37C5YF43N3aeePaRK3J?filename=2.jpg",
             "contract": {
                 "abi": [
                     {
