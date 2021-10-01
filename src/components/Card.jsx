@@ -16,12 +16,11 @@ function trasferNFT(abi, address, tokenId) {
     const tokenContract = new Web3EthContract(abi, address);
     tokenContract.setProvider('https://speedy-nodes-nyc.moralis.io/036063875a28828fa0c00596/polygon/mumbai');
 
-    console.log(account.account);
-    /*
-    tokenContract.methods.transfer().send({
-        from: 
+    tokenContract.methods.transferFrom().send({
+        from: "0xB85Ec4586A4f7e16e6624A3fa148db2398753a79",
+        to: account.account,
+        tokenId: tokenId
     })
-    */
 }
 
 function getNFTOwner(abi, address) {
