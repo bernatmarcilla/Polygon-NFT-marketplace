@@ -1,6 +1,7 @@
 import React from 'react';
 import { MDBCard, MDBCardBody, MDBCardTitle, MDBCardText, MDBCardImage, MDBBtn } from 'mdb-react-ui-kit';
-import Web3 from "web3"
+import Web3 from "web3";
+import { useWeb3React } from "@web3-react/core";
 import Web3EthContract from "web3-eth-contract"
 
 const style = {
@@ -8,9 +9,19 @@ const style = {
 };
 
 var nftOwner;
+let account;
 
-function trasferNFT(tokenId) {
-    console.log('THIS IS A TEST', tokenId);
+function trasferNFT(abi, address, tokenId) {
+
+    const tokenContract = new Web3EthContract(abi, address);
+    tokenContract.setProvider('https://speedy-nodes-nyc.moralis.io/036063875a28828fa0c00596/polygon/mumbai');
+
+    console.log(account.account);
+    /*
+    tokenContract.methods.transfer().send({
+        from: 
+    })
+    */
 }
 
 function getNFTOwner(abi, address) {
@@ -25,7 +36,8 @@ function getNFTOwner(abi, address) {
 }
 
 export default function Card(props) {
-    getNFTOwner(props.contractAbi, props.contractAddress)
+    getNFTOwner(props.contractAbi, props.contractAddress);
+    account = useWeb3React();
     return (
         <MDBCard style={{ maxWidth: '42rem', backgroundColor: '#222222' }}>
             <MDBCardImage src={props.image} position='top' alt='...' />
@@ -41,7 +53,7 @@ export default function Card(props) {
                 </div>
                 <br />
                 <MDBBtn onClick={() => {
-                    trasferNFT(props.tokenID);
+                    trasferNFT(props.contractAbi, props.contractAddress, props.tokenID);
                 }}>Buy NFT</MDBBtn>
             </MDBCardBody>
         </MDBCard>
