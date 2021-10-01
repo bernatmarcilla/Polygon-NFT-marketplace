@@ -11,16 +11,13 @@ var nftOwner;
 
 function getNFTOwner(abi, address) {
 
-    console.log("ABI:", abi);
-    console.log("ADDRESS:", address);
-    /*
-    const tokenContract = new Web3EthContract(abi, contract);
+    const tokenContract = new Web3EthContract(abi, address);
     tokenContract.setProvider('https://speedy-nodes-nyc.moralis.io/036063875a28828fa0c00596/polygon/mumbai');
 
     tokenContract.methods.owner().call().then(result => {
         nftOwner = result;
     });
-    */
+
 }
 
 export default function Card(props) {
@@ -35,7 +32,7 @@ export default function Card(props) {
                 </MDBCardText>
                 <hr />
                 <div style={style}>
-                    Owner: 0xB85Ec4586A4f7e16e6624A3fa148db2398753a79 {nftOwner}
+                    Owner: {nftOwner}
                     <br />
                 </div>
                 <br />
