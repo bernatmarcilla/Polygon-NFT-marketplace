@@ -9,6 +9,10 @@ const style = {
 
 var nftOwner;
 
+function Test() {
+    console.log('THIS IS A TEST');
+}
+
 function getNFTOwner(abi, address) {
 
     const tokenContract = new Web3EthContract(abi, address);
@@ -36,7 +40,9 @@ export default function Card(props) {
                     <br />
                 </div>
                 <br />
-                <MDBBtn href='#'>Buy NFT</MDBBtn>
+                <MDBBtn onClick={() => {
+                    Test();
+                }}>Buy NFT</MDBBtn>
             </MDBCardBody>
         </MDBCard>
     );
