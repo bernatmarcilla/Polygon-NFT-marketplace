@@ -9,8 +9,8 @@ const style = {
 
 var nftOwner;
 
-function Test() {
-    console.log('THIS IS A TEST');
+function trasferNFT(tokenId) {
+    console.log('THIS IS A TEST', tokenId);
 }
 
 function getNFTOwner(abi, address) {
@@ -41,7 +41,7 @@ export default function Card(props) {
                 </div>
                 <br />
                 <MDBBtn onClick={() => {
-                    Test();
+                    trasferNFT(props.tokenID);
                 }}>Buy NFT</MDBBtn>
             </MDBCardBody>
         </MDBCard>
