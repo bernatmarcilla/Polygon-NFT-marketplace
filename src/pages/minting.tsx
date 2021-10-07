@@ -39,7 +39,13 @@ function Minting() {
                                 <input type="text" id="fname" name="fname" /><br /><br />
                                 <h1>Description:</h1>
                                 <textarea name="message" rows="5" cols="30">The cat was playing in the garden.</textarea><br /><br />
-                                <h1>File:</h1>
+                                <h1>Is the NFT File deployed in the IPFS?:</h1>
+                                <select name="ipfs" id="ipfs">
+                                    <option value="">--Please choose an option--</option>
+                                    <option value="yes">YES</option>
+                                    <option value="no">No</option>
+                                </select>
+                                <h1>Select File:</h1>
                                 <input type="text" id="lname" name="lname" /><br /><br />
                                 <Dropzone onDrop={acceptedFiles => console.log(acceptedFiles)}>
                                     {({ getRootProps, getInputProps }) => (
