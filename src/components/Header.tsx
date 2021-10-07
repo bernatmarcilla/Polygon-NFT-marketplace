@@ -14,6 +14,8 @@ export function Header() {
       <div className="flex-1 px-2 mx-2">
         <span className="text-lg font-bold">{chainId == 80001 ? "🟢" : error ? "🔴" : "🟠"}</span>
         <h1 className="btn btn-ghost btn-sm rounded-btn" >{chainId == 80001 ? "Polygon Network" : "No Polygon Network"}</h1>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <h1>Test</h1>
       </div>
       <div className="flex-none hidden px-2 mx-2 lg:flex">
         <div className="flex items-stretch">
