@@ -45,7 +45,7 @@ function Minting() {
                                     <option value="yes">YES</option>
                                     <option value="no">No</option>
                                 </select>
-                                <h1>Select File:</h1>
+                                <h1>IPFS File url:</h1>
                                 <input type="text" id="lname" name="lname" /><br /><br />
                                 <Dropzone onDrop={acceptedFiles => console.log(acceptedFiles)}>
                                     {({ getRootProps, getInputProps }) => (
