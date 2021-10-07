@@ -1,5 +1,6 @@
 import { Web3ReactProvider } from "@web3-react/core";
 import Demo, { getLibrary } from "../components/Demo";
+import Dropzone from 'react-dropzone'
 
 const style = {
     fontSize: '40px'
@@ -31,12 +32,25 @@ function Minting() {
                 <div className="hero">
                     <div className="text-center hero-content">
                         <div className="max-w-md px-4 py-8">
-                            <h1 style={style} className="card-title">Content</h1>
+                            <h1 style={style} className="card-title">Mint NFT</h1>
+                            <br />
                             <form>
-                                <h1>First name:</h1><br />
-                                <input type="text" id="fname" name="fname" /><br />
-                                <h1>Last name:</h1><br />
-                                <input type="text" id="lname" name="lname" /><br />
+                                <h1>Name:</h1>
+                                <input type="text" id="fname" name="fname" /><br /><br />
+                                <h1>Description:</h1>
+                                <input type="text" id="lname" name="lname" /><br /><br />
+                                <h1>File:</h1>
+                                <input type="text" id="lname" name="lname" /><br /><br />
+                                <Dropzone onDrop={acceptedFiles => console.log(acceptedFiles)}>
+                                    {({ getRootProps, getInputProps }) => (
+                                        <section>
+                                            <div {...getRootProps()}>
+                                                <input {...getInputProps()} />
+                                                <p>Drag,n drop some files here, or click to select files</p>
+                                            </div>
+                                        </section>
+                                    )}
+                                </Dropzone>
                             </form>
                         </div>
                     </div>
