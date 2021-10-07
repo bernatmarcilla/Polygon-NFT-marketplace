@@ -1,8 +1,28 @@
 import { Web3ReactProvider } from "@web3-react/core";
 import Demo, { getLibrary } from "../components/Demo";
 
+const style = {
+    fontSize: '40px'
+};
 
 function Minting() {
+
+    function onSubmit() {
+        // defining the initial state for the form
+        const initialState = {
+            email: "",
+            password: "",
+        };
+    }
+
+    function onChange() {
+        // defining the initial state for the form
+        const initialState = {
+            email: "",
+            password: "",
+        };
+    }
+
     return (
         <Web3ReactProvider getLibrary={getLibrary}>
             <div className="container min-h-screen mx-auto">
@@ -11,7 +31,13 @@ function Minting() {
                 <div className="hero">
                     <div className="text-center hero-content">
                         <div className="max-w-md px-4 py-8">
-                            <h2>Content</h2>
+                            <h1 style={style} className="card-title">Content</h1>
+                            <form>
+                                <h1>First name:</h1><br />
+                                <input type="text" id="fname" name="fname" /><br />
+                                <h1>Last name:</h1><br />
+                                <input type="text" id="lname" name="lname" /><br />
+                            </form>
                         </div>
                     </div>
                 </div>
