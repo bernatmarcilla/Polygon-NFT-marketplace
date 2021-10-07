@@ -38,7 +38,7 @@ function Minting() {
                                 <h1>Name:</h1>
                                 <input type="text" id="fname" name="fname" /><br /><br />
                                 <h1>Description:</h1>
-                                <input type="text" id="lname" name="lname" /><br /><br />
+                                <textarea name="message" rows="5" cols="30">The cat was playing in the garden.</textarea><br /><br />
                                 <h1>File:</h1>
                                 <input type="text" id="lname" name="lname" /><br /><br />
                                 <Dropzone onDrop={acceptedFiles => console.log(acceptedFiles)}>
