@@ -19,7 +19,7 @@ const options = [
 
 function Minting() {
     let selectedOption;
-    const [state, setState] = useState([])
+    const [ipfs, setIpfs] = useState([])
 
     function onSubmit() {
         // defining the initial state for the form
@@ -31,7 +31,7 @@ function Minting() {
 
     function handleChange(selectedOption) {
         // defining the initial state for the form
-        setState(selectedOption.value);
+        setIpfs(selectedOption.value);
         console.log(`Option selected:`, selectedOption);
     }
 
@@ -59,10 +59,16 @@ function Minting() {
                                 <h1>Is the NFT File deployed in the IPFS?:</h1>
                                 <Select options={options} value={selectedOption} onChange={handleChange} />
 
-                                <h1>IPFS File url:</h1>
-                                <input type="text" id="lname" name="lname" /><br /><br />
-
-                                <h1>{state}</h1>
+                                <div>
+                                    {ipfs == 'yes'
+                                        ? <div>
+                                            <h1>IPFS File url:</h1>
+                                            <input type="text" id="lname" /> <br /> <br />
+                                        </div>
+                                        : ''
+                                    }
+                                </div>
+                                <h1>{ipfs}</h1>
                                 <div style={dropStyle} id='Dropzone'>
                                     <Dropzone onDrop={acceptedFiles => console.log(acceptedFiles)}>
                                         {({ getRootProps, getInputProps }) => (
