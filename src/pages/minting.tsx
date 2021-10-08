@@ -8,6 +8,11 @@ const style = {
     fontSize: '40px'
 };
 
+const buttonStyle = {
+    backgroundColor: '#7530ff',
+    fontSize: '20px'
+};
+
 const dropStyle = {
     backgroundColor: 'grey',
 };
@@ -84,6 +89,8 @@ function Minting() {
                                     }
                                 </div>
                             </form>
+                            <br />
+                            <h1 style={buttonStyle} className="btn btn-ghost btn-sm rounded-btn">Mint NFT</h1>
                         </div>
                     </div>
                 </div>
