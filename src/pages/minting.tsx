@@ -62,24 +62,26 @@ function Minting() {
                                 <div>
                                     {ipfs == 'yes'
                                         ? <div>
+                                            <br />
                                             <h1>IPFS File url:</h1>
                                             <input type="text" id="lname" /> <br /> <br />
                                         </div>
-                                        : ''
+                                        : <div id='Dropzone'>
+                                            <br />
+                                            <div style={dropStyle}>
+                                                <Dropzone onDrop={acceptedFiles => console.log(acceptedFiles)}>
+                                                    {({ getRootProps, getInputProps }) => (
+                                                        <section>
+                                                            <div {...getRootProps()}>
+                                                                <input {...getInputProps()} />
+                                                                <p>Drag,n drop some files here, or click to select files</p>
+                                                            </div>
+                                                        </section>
+                                                    )}
+                                                </Dropzone>
+                                            </div>
+                                        </div>
                                     }
-                                </div>
-                                <h1>{ipfs}</h1>
-                                <div style={dropStyle} id='Dropzone'>
-                                    <Dropzone onDrop={acceptedFiles => console.log(acceptedFiles)}>
-                                        {({ getRootProps, getInputProps }) => (
-                                            <section>
-                                                <div {...getRootProps()}>
-                                                    <input {...getInputProps()} />
-                                                    <p>Drag,n drop some files here, or click to select files</p>
-                                                </div>
-                                            </section>
-                                        )}
-                                    </Dropzone>
                                 </div>
                             </form>
                         </div>
