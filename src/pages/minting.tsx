@@ -1,10 +1,20 @@
 import { Web3ReactProvider } from "@web3-react/core";
 import Demo, { getLibrary } from "../components/Demo";
 import Dropzone from 'react-dropzone'
+import Select from 'react-select'
 
 const style = {
     fontSize: '40px'
 };
+
+const dropStyle = {
+    backgroundColor: 'grey',
+};
+const options = [
+    { value: '', label: '--Please choose an option--' },
+    { value: 'yes', label: 'YES' },
+    { value: 'no', label: 'NO' }
+]
 
 function Minting() {
 
@@ -37,26 +47,28 @@ function Minting() {
                             <form>
                                 <h1>Name:</h1>
                                 <input type="text" id="fname" name="fname" /><br /><br />
+
                                 <h1>Description:</h1>
                                 <textarea name="message" rows="5" cols="30">The cat was playing in the garden.</textarea><br /><br />
+
                                 <h1>Is the NFT File deployed in the IPFS?:</h1>
-                                <select name="ipfs" id="ipfs">
-                                    <option value="">--Please choose an option--</option>
-                                    <option value="yes">YES</option>
-                                    <option value="no">No</option>
-                                </select>
+                                <Select options={options} />
+
                                 <h1>IPFS File url:</h1>
                                 <input type="text" id="lname" name="lname" /><br /><br />
-                                <Dropzone onDrop={acceptedFiles => console.log(acceptedFiles)}>
-                                    {({ getRootProps, getInputProps }) => (
-                                        <section>
-                                            <div {...getRootProps()}>
-                                                <input {...getInputProps()} />
-                                                <p>Drag,n drop some files here, or click to select files</p>
-                                            </div>
-                                        </section>
-                                    )}
-                                </Dropzone>
+
+                                <div style={dropStyle} id='Dropzone'>
+                                    <Dropzone onDrop={acceptedFiles => console.log(acceptedFiles)}>
+                                        {({ getRootProps, getInputProps }) => (
+                                            <section>
+                                                <div {...getRootProps()}>
+                                                    <input {...getInputProps()} />
+                                                    <p>Drag,n drop some files here, or click to select files</p>
+                                                </div>
+                                            </section>
+                                        )}
+                                    </Dropzone>
+                                </div>
                             </form>
                         </div>
                     </div>
