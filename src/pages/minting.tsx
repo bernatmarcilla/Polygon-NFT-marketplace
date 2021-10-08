@@ -26,12 +26,8 @@ function Minting() {
     let selectedOption;
     const [ipfs, setIpfs] = useState([])
 
-    function onSubmit() {
-        // defining the initial state for the form
-        const initialState = {
-            email: "",
-            password: "",
-        };
+    function mintToken() {
+        console.log("Minting token...");
     }
 
     function handleChange(selectedOption) {
@@ -90,7 +86,7 @@ function Minting() {
                                 </div>
                             </form>
                             <br />
-                            <h1 style={buttonStyle} className="btn btn-ghost btn-sm rounded-btn">Mint NFT</h1>
+                            <h1 style={buttonStyle} onClick={mintToken} className="btn btn-ghost btn-sm rounded-btn">Mint NFT</h1>
                         </div>
                     </div>
                 </div>
