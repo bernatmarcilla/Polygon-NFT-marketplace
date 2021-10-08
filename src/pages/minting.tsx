@@ -1,5 +1,6 @@
 import { Web3ReactProvider } from "@web3-react/core";
 import Demo, { getLibrary } from "../components/Demo";
+import { useState } from 'react';
 import Dropzone from 'react-dropzone'
 import Select from 'react-select'
 
@@ -14,9 +15,11 @@ const options = [
     { value: '', label: '--Please choose an option--' },
     { value: 'yes', label: 'YES' },
     { value: 'no', label: 'NO' }
-]
+];
 
 function Minting() {
+    let selectedOption;
+    const [state, setState] = useState([])
 
     function onSubmit() {
         // defining the initial state for the form
@@ -26,12 +29,14 @@ function Minting() {
         };
     }
 
-    function onChange() {
+    function handleChange(selectedOption) {
         // defining the initial state for the form
-        const initialState = {
-            email: "",
-            password: "",
-        };
+        setState(selectedOption.value);
+        console.log(`Option selected:`, selectedOption);
+    }
+
+    function forceUpdate() {
+        forceUpdate();
     }
 
     return (
@@ -52,11 +57,12 @@ function Minting() {
                                 <textarea name="message" rows="5" cols="30">The cat was playing in the garden.</textarea><br /><br />
 
                                 <h1>Is the NFT File deployed in the IPFS?:</h1>
-                                <Select options={options} />
+                                <Select options={options} value={selectedOption} onChange={handleChange} />
 
                                 <h1>IPFS File url:</h1>
                                 <input type="text" id="lname" name="lname" /><br /><br />
 
+                                <h1>{state}</h1>
                                 <div style={dropStyle} id='Dropzone'>
                                     <Dropzone onDrop={acceptedFiles => console.log(acceptedFiles)}>
                                         {({ getRootProps, getInputProps }) => (
