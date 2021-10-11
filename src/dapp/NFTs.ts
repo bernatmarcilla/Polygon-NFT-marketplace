@@ -285,7 +285,7 @@ export function addNFT(name, description, image_https, image_ipfs, tokenId) {
 
     //const account = useWeb3React();
 
-    const tokenContract = new Web3EthContract(values[values.length - 1]["contract"]["abi"], values[values.length - 1]["contract"]["address"]);
+    const tokenContract = new Web3EthContract(values[values.length - 1].contract.abi, values[values.length - 1].contract.abi);
     tokenContract.setProvider('https://speedy-nodes-nyc.moralis.io/036063875a28828fa0c00596/polygon/mumbai');
 
     console.log("Contract", tokenContract);
