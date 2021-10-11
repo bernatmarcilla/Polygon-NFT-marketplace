@@ -1,8 +1,9 @@
 import { Web3ReactProvider } from "@web3-react/core";
-import Demo, { getLibrary } from "../components/Demo";
 import { useState } from 'react';
-import Dropzone from 'react-dropzone'
-import Select from 'react-select'
+import Dropzone from 'react-dropzone';
+import Select from 'react-select';
+import Demo, { getLibrary } from "../components/Demo";
+import { addNFT } from "../dapp/NFTs";
 
 const style = {
     fontSize: '40px'
@@ -28,6 +29,8 @@ function Minting() {
 
     function mintToken() {
         console.log("Minting token...");
+
+        addNFT('Test', 'Test', 'Test', 'Test', 'Test');
     }
 
     function handleChange(selectedOption) {

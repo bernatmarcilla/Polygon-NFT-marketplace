@@ -211,7 +211,8 @@ export function getNFTs() {
 }
 
 export function addNFT(name, description, image_https, image_ipfs, tokenId) {
-    values[length(values)] = {
+
+    values[values.length] = {
         "name": name,
         "description": description,
         "image_https": image_https,
