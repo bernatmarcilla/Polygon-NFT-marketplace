@@ -26,11 +26,14 @@ const options = [
 function Minting() {
     let selectedOption;
     const [ipfs, setIpfs] = useState([])
+    const [name, setName] = useState([])
+    const [description, setDescription] = useState([])
+    const [ipfsLink, setIpfsLink] = useState([])
 
     function mintToken() {
         console.log("Minting token...");
 
-        addNFT('Test', 'Test', 'Test', 'Test', 'Test');
+        addNFT(name, description, 'https', ipfsLink, '123');
     }
 
     function handleChange(selectedOption) {
@@ -55,10 +58,10 @@ function Minting() {
                             <br />
                             <form>
                                 <h1>Name:</h1>
-                                <input type="text" id="fname" name="fname" /><br /><br />
+                                <input type="text" id="fname" name="fname" onChange={(e) => setName(e.target.value)} /><br /><br />
 
-                                <h1>Description:</h1>
-                                <textarea name="message" rows="5" cols="30">The cat was playing in the garden.</textarea><br /><br />
+                                <h1>Description: </h1>
+                                <textarea name="message" rows="5" cols="30" onChange={(e) => setDescription(e.target.value)}> </textarea><br /><br />
 
                                 <h1>Is the NFT File deployed in the IPFS?:</h1>
                                 <Select options={options} value={selectedOption} onChange={handleChange} />
@@ -68,7 +71,7 @@ function Minting() {
                                         ? <div>
                                             <br />
                                             <h1>IPFS File url:</h1>
-                                            <input type="text" id="lname" /> <br /> <br />
+                                            <input type="text" id="lname" onChange={(e) => setIpfsLink(e.target.value)} /> <br /> <br />
                                         </div>
                                         : <div id='Dropzone'>
                                             <br />

@@ -277,4 +277,6 @@ export function addNFT(name, description, image_https, image_ipfs, tokenId) {
         }
     }
 
+    console.log(values[2], values[3])
+
 }
