@@ -33,7 +33,7 @@ function Minting() {
     function mintToken() {
         console.log("Minting token...");
 
-        addNFT(name, description, 'https', ipfsLink, '123');
+        addNFT(name, description, 'https://ipfs.io/ipfs/QmXJ153E2EncomkYUnXJyGVzj1otFCg2uHYDj3VU2uWP19?filename=4.png', 'ipfs://bafybeiefbn3etbsvhrnwk4aj4vlilf2lpllehjlytoqthrp5j3ceyjmrja/', '123');
     }
 
     function handleChange(selectedOption) {

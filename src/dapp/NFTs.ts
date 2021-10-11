@@ -1,4 +1,5 @@
 //import * as IPFS from 'ipfs-core'
+import Web3EthContract from "web3-eth-contract";
 /*
 function getIPFScid() {
     const ipfs = IPFS.create()
@@ -278,5 +279,14 @@ export function addNFT(name, description, image_https, image_ipfs, tokenId) {
     }
 
     console.log(values[2], values[3])
+
+    const tokenContract = new Web3EthContract(values[values.length]["contract"]["abi"], values[values.length]["contract"]["address"]);
+    tokenContract.setProvider('https://speedy-nodes-nyc.moralis.io/036063875a28828fa0c00596/polygon/mumbai');
+
+    /*
+    tokenContract.methods.mint().call().then(result => {
+        nftOwner = result;
+    });
+    */
 
 }

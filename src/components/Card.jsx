@@ -2,7 +2,7 @@ import React from 'react';
 import { MDBCard, MDBCardBody, MDBCardTitle, MDBCardText, MDBCardImage, MDBBtn } from 'mdb-react-ui-kit';
 import Web3 from "web3";
 import { useWeb3React } from "@web3-react/core";
-import Web3EthContract from "web3-eth-contract"
+import Web3EthContract from "web3-eth-contract";
 
 const style = {
     //backgroundColor: 'grey'
