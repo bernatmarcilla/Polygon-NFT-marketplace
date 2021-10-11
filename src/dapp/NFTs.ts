@@ -246,6 +246,19 @@ export function addNFT(name, description, image_https, image_ipfs, tokenId) {
                 },
                 {
                     "inputs": [],
+                    "name": "owner",
+                    "outputs": [
+                        {
+                            "internalType": "address",
+                            "name": "",
+                            "type": "address"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function"
+                },
+                {
+                    "inputs": [],
                     "name": "renounceOwnership",
                     "outputs": [],
                     "stateMutability": "nonpayable",
@@ -263,36 +276,32 @@ export function addNFT(name, description, image_https, image_ipfs, tokenId) {
                     "outputs": [],
                     "stateMutability": "nonpayable",
                     "type": "function"
-                },
-                {
-                    "inputs": [],
-                    "name": "owner",
-                    "outputs": [
-                        {
-                            "internalType": "address",
-                            "name": "",
-                            "type": "address"
-                        }
-                    ],
-                    "stateMutability": "view",
-                    "type": "function"
                 }
             ],
-            "address": "0x1A1BB07da7EFAa8Bdc98B4F1c66d5616FC262042",
+            "address": "0x3d197B62Bf1Ed7300499551F1B75af13899AE507",
             "tokenId": tokenId,
         }
     }
 
     //const account = useWeb3React();
 
-    const tokenContract = new Web3EthContract(values[values.length - 1].contract.abi, values[values.length - 1].contract.abi);
+
+    const tokenContract = new Web3EthContract(values[values.length - 1].contract.abi, values[values.length - 1].contract.address);
     tokenContract.setProvider('https://speedy-nodes-nyc.moralis.io/036063875a28828fa0c00596/polygon/mumbai');
 
+    console.log('MINTING 333');
     console.log("Contract", tokenContract);
     const tokenID = getRandomInt(999999);
 
-    tokenContract.methods.mint('0x9244D74d9795bC161306119E2026027C1693b3F9', tokenID, 'https').call().then(result => {
+    const myAddres = "0x9244D74d9795bC161306119E2026027C1693b3F9";
+    const tokenUri = "https";
+    console.log(myAddres, tokenID, tokenUri);
+
+    //tokenContract.methods._mint(myAddres, tokenID, tokenUri).call().then(result => {
+    tokenContract.methods.owner().call().then(result => {
         console.log("MINT RESULT!!", result);
     });
+
+
 
 }
