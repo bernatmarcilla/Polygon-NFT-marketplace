@@ -1,5 +1,5 @@
 import { Web3ReactProvider } from "@web3-react/core";
-import { getNFTs } from "../dapp/NFTs";
+import { getNFTs, addNFT } from "../dapp/NFTs";
 import Demo, { getLibrary } from "../components/Demo";
 import Card from "../components/Card"
 
