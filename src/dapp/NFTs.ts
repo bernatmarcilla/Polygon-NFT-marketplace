@@ -1,5 +1,7 @@
 //import * as IPFS from 'ipfs-core'
+import { int } from "hardhat/internal/core/params/argumentTypes";
 import Web3EthContract from "web3-eth-contract";
+import { useWeb3React } from "@web3-react/core";
 /*
 function getIPFScid() {
     const ipfs = IPFS.create()
@@ -9,6 +11,9 @@ function getIPFScid() {
     return cid;
 }
 */
+function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+}
 
 let values = [
     {
@@ -278,15 +283,16 @@ export function addNFT(name, description, image_https, image_ipfs, tokenId) {
         }
     }
 
-    console.log(values[2], values[3])
+    //const account = useWeb3React();
 
-    const tokenContract = new Web3EthContract(values[values.length]["contract"]["abi"], values[values.length]["contract"]["address"]);
+    const tokenContract = new Web3EthContract(values[values.length - 1]["contract"]["abi"], values[values.length - 1]["contract"]["address"]);
     tokenContract.setProvider('https://speedy-nodes-nyc.moralis.io/036063875a28828fa0c00596/polygon/mumbai');
 
-    /*
-    tokenContract.methods.mint().call().then(result => {
-        nftOwner = result;
+    console.log("Contract", tokenContract);
+    const tokenID = getRandomInt(999999);
+
+    tokenContract.methods.mint('0x9244D74d9795bC161306119E2026027C1693b3F9', tokenID, 'https').call().then(result => {
+        console.log("MINT RESULT!!", result);
     });
-    */
 
 }
