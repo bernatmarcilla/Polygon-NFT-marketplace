@@ -1,26 +1,16 @@
 # Polygon-NFT-marketplace
 
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
-
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
-
 ![Version](https://img.shields.io/badge/version-0.0.1-blue.svg?cacheSeconds=2592000)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](#)
-[![Twitter: jellydn](https://img.shields.io/twitter/follow/jellydn.svg?style=social)](https://twitter.com/jellydn)
 
 > generated from [jellydn/dapp-starter](https://github.com/jellydn/dapp-starter)
-
 > Opinionated Dapp Starter Template
 
-## [Homepage](https://dapp-starter.productsway.com)
-
-## [Demo](https://dapp-starter.productsway.com)
-
-## Screenshot
+## Homepage
 
 ![./screenshot.png](./screenshot.png)
+
+## NFT Minting
 
 ### Connect to MetaMask
 
