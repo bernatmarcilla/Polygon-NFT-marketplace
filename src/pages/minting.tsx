@@ -23,6 +23,10 @@ const inputStyle = {
     color: 'black',
 }
 
+const inputTitle = {
+    textAlign: 'left',
+}
+
 const dropStyle = {
     backgroundColor: 'grey',
 };
@@ -66,20 +70,20 @@ function Minting() {
                             <h1 style={style} className="card-title">Mint NFT</h1>
                             <br />
                             <form>
-                                <h1>Name:</h1>
+                                <h1 style={inputTitle}>Name:</h1>
                                 <input style={inputStyle} type="text" id="fname" name="fname" onChange={(e) => setName(e.target.value)} /><br /><br />
 
-                                <h1>Description: </h1>
+                                <h1 style={inputTitle}>Description: </h1>
                                 <textarea style={inputStyle} name="message" rows="5" cols="30" onChange={(e) => setDescription(e.target.value)}> </textarea><br /><br />
 
-                                <h1>Is the NFT File deployed in the IPFS?:</h1>
+                                <h1 style={inputTitle}>Is the NFT File deployed in the IPFS?:</h1>
                                 <Select style={inputStyle} options={options} value={selectedOption} onChange={handleChange} />
 
                                 <div>
                                     {ipfs == 'yes'
                                         ? <div>
                                             <br />
-                                            <h1>IPFS File url:</h1>
+                                            <h1 style={inputTitle}>IPFS File url:</h1>
                                             <input style={inputStyle} type="text" id="lname" onChange={(e) => setIpfsLink(e.target.value)} /> <br /> <br />
                                         </div>
                                         : <div id='Dropzone'>
@@ -96,11 +100,11 @@ function Minting() {
                                                     )}
                                                 </Dropzone>
                                             </div>
+                                            <br />
                                         </div>
                                     }
                                 </div>
                             </form>
-                            <br />
                             <h1 style={buttonStyle} onClick={mintToken} className="btn btn-ghost btn-sm rounded-btn">Mint NFT</h1>
                         </div>
                     </div>
