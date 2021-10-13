@@ -16,7 +16,70 @@ function getRandomInt(max) {
 }
 
 let values = [
-
+    {
+        "name": "NFT Charles",
+        "description": "This image shows the true nature of Cardano.",
+        "image_https": "https://ipfs.io/ipfs/QmNxfYJbg9QTEYTC8cTumH1csQP37C5YF43N3aeePaRK3J/",
+        "image_ipfs": "ipfs://bafybeiel6555j5mnlkhwffwrewqxh5vfrqysbvzsndc3xjstrl5yquh62q/",
+        "contract": {
+            "abi": [
+                {
+                    "anonymous": false,
+                    "inputs": [
+                        {
+                            "indexed": true,
+                            "internalType": "address",
+                            "name": "previousOwner",
+                            "type": "address"
+                        },
+                        {
+                            "indexed": true,
+                            "internalType": "address",
+                            "name": "newOwner",
+                            "type": "address"
+                        }
+                    ],
+                    "name": "OwnershipTransferred",
+                    "type": "event"
+                },
+                {
+                    "inputs": [],
+                    "name": "owner",
+                    "outputs": [
+                        {
+                            "internalType": "address",
+                            "name": "",
+                            "type": "address"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function"
+                },
+                {
+                    "inputs": [],
+                    "name": "renounceOwnership",
+                    "outputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "function"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "address",
+                            "name": "newOwner",
+                            "type": "address"
+                        }
+                    ],
+                    "name": "transferOwnership",
+                    "outputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "function"
+                }
+            ],
+            "address": "0x25fF1f3CEc4B29Db77455AdfC1a01cB1E43F1FeB",
+            "tokenId": 234234,
+        }
+    },
     {
         "name": "NFT Charles Falcon",
         "description": "This image shows the true nature of Cardano Falcon.",
@@ -79,6 +142,70 @@ let values = [
             ],
             "address": "0x25fF1f3CEc4B29Db77455AdfC1a01cB1E43F1FeB",
             "tokenId": 456456,
+        }
+    },
+    {
+        "name": "NFT Shiba",
+        "description": "This image shows the true nature of ToTheMoon Meaning.",
+        "image_https": "https://ipfs.io/ipfs/QmXm2FmMfwk7gtDzwXcJR57mm4AoZPAMRi4cEnQPPDg39d/",
+        "image_ipfs": "ipfs://bafybeiel6555j5mnlkhwffwrewqxh5vfrqysbvzsndc3xjstrl5yquh62q/",
+        "contract": {
+            "abi": [
+                {
+                    "anonymous": false,
+                    "inputs": [
+                        {
+                            "indexed": true,
+                            "internalType": "address",
+                            "name": "previousOwner",
+                            "type": "address"
+                        },
+                        {
+                            "indexed": true,
+                            "internalType": "address",
+                            "name": "newOwner",
+                            "type": "address"
+                        }
+                    ],
+                    "name": "OwnershipTransferred",
+                    "type": "event"
+                },
+                {
+                    "inputs": [],
+                    "name": "renounceOwnership",
+                    "outputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "function"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "address",
+                            "name": "newOwner",
+                            "type": "address"
+                        }
+                    ],
+                    "name": "transferOwnership",
+                    "outputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "function"
+                },
+                {
+                    "inputs": [],
+                    "name": "owner",
+                    "outputs": [
+                        {
+                            "internalType": "address",
+                            "name": "",
+                            "type": "address"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function"
+                }
+            ],
+            "address": "0x1A1BB07da7EFAa8Bdc98B4F1c66d5616FC262042",
+            "tokenId": 123123,
         }
     }
 ];
