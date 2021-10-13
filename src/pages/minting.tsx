@@ -4,10 +4,12 @@ import Dropzone from 'react-dropzone';
 import Select from 'react-select';
 import Demo, { getLibrary } from "../components/Demo";
 import { addNFT } from "../dapp/NFTs";
+import Image from 'next/image'
 
 const style = {
     fontSize: '40px'
 };
+
 
 const buttonStyle = {
     backgroundColor: '#7530ff',
@@ -94,7 +96,12 @@ function Minting() {
                                                         <section>
                                                             <div {...getRootProps()}>
                                                                 <input {...getInputProps()} />
-                                                                <p>Drag,n drop some files here, or click to select files</p>
+                                                                <Image
+                                                                    src="/src/dapp/dragNdropContainer.PNG"
+                                                                    width={2400}
+                                                                    height={1598}
+                                                                    layout="responsive"
+                                                                />
                                                             </div>
                                                         </section>
                                                     )}
