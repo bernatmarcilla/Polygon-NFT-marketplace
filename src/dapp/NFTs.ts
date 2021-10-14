@@ -289,7 +289,6 @@ export function addNFT(name, description, image_https, image_ipfs, tokenId) {
     const tokenContract = new Web3EthContract(values[values.length - 1].contract.abi, values[values.length - 1].contract.address);
     tokenContract.setProvider('https://speedy-nodes-nyc.moralis.io/036063875a28828fa0c00596/polygon/mumbai');
 
-    console.log('MINTING 333');
     console.log("Contract", tokenContract);
     const tokenID = getRandomInt(999999);
 
@@ -299,7 +298,7 @@ export function addNFT(name, description, image_https, image_ipfs, tokenId) {
 
     //tokenContract.methods._mint(myAddres, tokenID, tokenUri).call().then(result => {
     tokenContract.methods.owner().call().then(result => {
-        console.log("MINT RESULT!!", result);
+        console.log("MINT RESULT!", result);
     });
 
 
