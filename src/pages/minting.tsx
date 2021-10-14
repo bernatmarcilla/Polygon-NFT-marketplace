@@ -44,6 +44,12 @@ function getRandomInt(max) {
 
 function getImage(ipfsLink) {
     //function to get the image from IPFS
+    //const ipfs = IPFS.create()
+    //const { cid } = ipfs.get(ipfsLink)
+    //console.log(cid)
+    // QmXXY5ZxbtuYj6DnfApLiGstzPN7fvSyigrRee3hDWPCaf
+    //return cid;
+
     return 0;
 }
 
