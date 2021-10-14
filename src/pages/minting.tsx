@@ -38,6 +38,15 @@ const options = [
     { value: 'no', label: 'NO' }
 ];
 
+function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+}
+
+function getImage(ipfsLink) {
+    //function to get the image from IPFS
+    return 0;
+}
+
 function Minting() {
     let selectedOption;
     const [ipfs, setIpfs] = useState([])
@@ -45,10 +54,12 @@ function Minting() {
     const [description, setDescription] = useState([])
     const [ipfsLink, setIpfsLink] = useState([])
 
+
     function mintToken() {
         console.log("Minting token...");
 
-        addNFT(name, description, 'https://ipfs.io/ipfs/QmXJ153E2EncomkYUnXJyGVzj1otFCg2uHYDj3VU2uWP19?filename=4.png', 'ipfs://bafybeiefbn3etbsvhrnwk4aj4vlilf2lpllehjlytoqthrp5j3ceyjmrja/', '123');
+        console.log("Form values: ", name, description, ipfsLink);
+        addNFT(name, description, getImage(ipfsLink), ipfsLink, getRandomInt(999999));
     }
 
     function handleChange(selectedOption) {
