@@ -6,11 +6,13 @@
 > generated from [jellydn/dapp-starter](https://github.com/jellydn/dapp-starter)
 > Opinionated Dapp Starter Template
 
-## Homepage
+## Homepage - Marketplace
 
 ![./screenshot.png](./img/screenshot.png)
 
 ## NFT Minting
+
+![./screenshotMinting.png](./img/screenshotMinting.png)
 
 ### Connect to MetaMask
 
