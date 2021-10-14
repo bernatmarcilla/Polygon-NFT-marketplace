@@ -8,7 +8,7 @@
 
 ## Homepage
 
-![./screenshot.png](./screenshot.png)
+![./screenshot.png](./img/screenshot.png)
 
 ## NFT Minting
 
