@@ -14,10 +14,6 @@
 
 ![./screenshotMinting.png](./img/screenshotMinting.png)
 
-### Connect to MetaMask
-
-![https://gyazo.com/6b8f75171de1fab24de552ff7930f4b8.gif](https://gyazo.com/6b8f75171de1fab24de552ff7930f4b8.gif)
-
 ## Features
 
 - The React Framework for Production [NextJs](https://https://nextjs.org//)
