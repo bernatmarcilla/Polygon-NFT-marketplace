@@ -15,16 +15,13 @@ function App() {
           <div className="text-center hero-content">
             <div className="max-w-md px-4 py-8">
 
-
-              {nftList.map((x) => {
-                console.log('!');
-                return (
-                  <div key={x.name}>
-                    <Card name={x.name} image={x.image_https} contractAbi={x.contract.abi} contractAddress={x.contract.address} description={x.description} tokenID={x.contract.tokenId} />
-                    <br />
-                  </div>
-                )
-              })}
+              {nftList.map((x) => (
+                <div key={x.name}>
+                  <Card name={x.name} image={x.image_https} contractAbi={x.contract.abi} contractAddress={x.contract.address} description={x.description} tokenID={x.contract.tokenId} />
+                  <br />
+                </div>
+              )
+              )}
             </div>
           </div>
         </div>

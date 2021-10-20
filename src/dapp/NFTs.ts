@@ -1,16 +1,18 @@
-//import * as IPFS from 'ipfs-core'
-import { int } from "hardhat/internal/core/params/argumentTypes";
+//import * as IPFS from 'ipfs-core';
 import Web3EthContract from "web3-eth-contract";
 import { useWeb3React } from "@web3-react/core";
+
 /*
 function getIPFScid() {
-    const ipfs = IPFS.create()
-    const { cid } = ipfs.add('Hello world')
-    //console.info(cid)
+    const ipfs = IPFS.create();
+    console.log("IPFS:", ipfs);
+    //const { cid } = ipfs.add('Hello world');
+    //console.info(cid);
     // QmXXY5ZxbtuYj6DnfApLiGstzPN7fvSyigrRee3hDWPCaf
-    return cid;
+    //return cid;
 }
 */
+
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
 }
@@ -213,6 +215,7 @@ let values = [
 /* eslint-disable import/prefer-default-export */
 export function getNFTs() {
 
+    //getIPFScid();
     return values;
 }
 
