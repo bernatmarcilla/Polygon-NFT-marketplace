@@ -10,13 +10,15 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Post {
+model NFT {
   id        Int     @default(autoincrement()) @id
-  title     String
-  content   String?
-  published Boolean @default(false)
-  author    User?   @relation(fields: [authorId], references: [id])
-  authorId  Int?
+  name      String
+  description   String?
+  image_https   String?
+  image_ipfs   String?
+  contract_abi   String?
+  contract_address   String?
+  contact_tokenId    String?
 }
 
 model User {
@@ -25,6 +27,5 @@ model User {
   email         String?   @unique
   createdAt     DateTime  @default(now()) @map(name: "created_at")
   updatedAt     DateTime  @updatedAt @map(name: "updated_at")
-  posts         Post[]
   @@map(name: "users")
 }
