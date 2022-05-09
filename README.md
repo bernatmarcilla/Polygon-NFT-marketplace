@@ -1,6 +1,8 @@
 # Polygon-NFT-marketplace
 
 ![Version](https://img.shields.io/badge/version-0.0.1-blue.svg?cacheSeconds=2592000)
+![npm-install](https://img.shields.io/badge/failed-red?label=npm-install&logo=Npm)
+![project-status](https://img.shields.io/badge/WIP-red?label=Project-status&logo=google-cloud&logoColor=white)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](#)
 
 > generated from [jellydn/dapp-starter](https://github.com/jellydn/dapp-starter)
